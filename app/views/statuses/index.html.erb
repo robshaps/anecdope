@@ -1,0 +1,24 @@
+
+<div class="page-header">
+  <p> <img src="images/Anecdope-logo.png" /> </p>
+  <h2>Story: The Stranger in the Woods </h2>
+
+ </div>
+ <%= link_to "New Paragraph", new_status_path %> 
+ <br>
+ <br>
+ <% @statuses.each do |status| %>
+<div class="status">
+    <strong><%= status.name %></strong>
+    <p><%= status.content %></p>
+    <div class="meta">
+      <%= link_to time_ago_in_words(status.created_at) + " ago", status %> 
+      <span class="admin">
+         |  <%= link_to "Rate this", status_path(status) %> |
+         
+      </span>
+    </div>
+</div>
+ <% end %>
+ 
+
