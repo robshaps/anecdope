@@ -26,7 +26,7 @@ class StatusesController < ApplicationController
   # GET /statuses/new
   # GET /statuses/new.json
   def new
-    @status = Status.new
+    @status = current_user.statuses.new 
 
     respond_to do |format|
       format.html # new.html.erb

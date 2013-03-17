@@ -11,5 +11,7 @@ class User < ActiveRecord::Base
 
   letsrate_rater
 
+  has_many :statuses
+
 end
  
