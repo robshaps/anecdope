@@ -3,8 +3,7 @@
   <p> <img src="images/Anecdope-logo.png" /> </p>
   <h2>Story: The Stranger in the Woods </h2>
 
- </div>
- <%= link_to "New Paragraph", new_status_path %> 
+ </div> 
  <br>
  <br>
  <% @statuses.each do |status| %>
@@ -15,6 +14,7 @@
       <%= link_to time_ago_in_words(status.created_at) + " ago", status %> 
       <span class="admin">
          |  <%= link_to "Rate this", status_path(status) %> |
+         <%= link_to "Add Paragraph", edit_status_path(status) %>
          
       </span>
     </div>
