@@ -1,11 +1,10 @@
 
 <div class="page-header">
-  <p> <img src="images/Anecdope-logo.png" /> </p>
-  <h2>Story: The Stranger in the Woods </h2>
+  <p> <img src="images/AnecDopeX.png" /> </p>
+  <h2>Stories in progress: </h2>
 
  </div> 
- <br>
- <br>
+
  <% @statuses.each do |status| %>
 <div class="status">
     <strong><%= status.name %></strong>
@@ -14,7 +13,9 @@
       <%= link_to time_ago_in_words(status.created_at) + " ago", status %> 
       <span class="admin">
          |  <%= link_to "Rate this", status_path(status) %> |
-         <%= link_to "Add Paragraph", edit_status_path(status) %>
+         <%= link_to "Add Paragraph", edit_status_path(status) %> |
+          <%= link_to "See full story" %>
+
          
       </span>
     </div>
