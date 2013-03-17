@@ -12,7 +12,7 @@ class StatusesController < ApplicationController
     end
   end
 
-  # GET /statuses/1
+  # GET /statuses/1 
   # GET /statuses/1.json
   def show
     @status = Status.find(params[:id])
@@ -26,7 +26,7 @@ class StatusesController < ApplicationController
   # GET /statuses/new
   # GET /statuses/new.json
   def new
-    @status = current_user.statuses.new 
+    @status = current_user.statuses.new
 
     respond_to do |format|
       format.html # new.html.erb
